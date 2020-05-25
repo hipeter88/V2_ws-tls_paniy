@@ -1,6 +1,6 @@
-## V2Ray 基于 Nginx 的 vmess+ws+tls 一键安装脚本
+## V2 基于 Nginx 的 vmess+ws+tls 脚本
 
-> 感谢 JetBrains 提供的非商业开源软件开发授权
+>  JetBrains 提供的非商业开源软件开发授权
 
 > Thanks for non-commercial open source development authorization by JetBrains
 ### 优化修改版说明
@@ -15,7 +15,7 @@
 
 ### 准备工作
 * 准备一个域名，并将A记录添加好。
-* [V2ray官方说明](https://www.v2ray.com/)，了解 TLS WebSocket 及 V2ray 相关信息
+* [V2官方说明](https://www.v2ray.com/)，了解 TLS WebSocket 及 V2ray 相关信息
 * 安装好 wget
 
 ### 安装/更新方式（h2 和 ws 版本已合并）
@@ -50,13 +50,13 @@ wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontent.c
 
 ### V2ray 简介
 
-* V2Ray是一个优秀的开源网络代理工具，可以帮助你畅爽体验互联网，目前已经全平台支持Windows、Mac、Android、IOS、Linux等操作系统的使用。
+* V2是一个优秀的开源网络代理工具，可以帮助你畅爽体验互联网，目前已经全平台支持Windows、Mac、Android、IOS、Linux等操作系统的使用。
 * 本脚本为一键完全配置脚本，在所有流程正常运行完毕后，直接按照输出结果设置客户端即可使用
 * 请注意：我们依然强烈建议你全方面的了解整个程序的工作流程及原理
 
 ### 建议单服务器仅搭建单个代理
-* 本脚本默认安装最新版本的V2ray core
-* V2ray core 目前最新版本为 4.22.1（同时请注意客户端 core 的同步更新，需要保证客户端内核版本 >= 服务端内核版本）
+* 本脚本默认安装最新版本的V2 core
+* V2 core 目前最新版本为 4.22.1（同时请注意客户端 core 的同步更新，需要保证客户端内核版本 >= 服务端内核版本）
 * 建议使用默认的443端口作为连接端口
 * 伪装内容可自行替换。
 
@@ -64,16 +64,16 @@ wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontent.c
 * 推荐在纯净环境下使用本脚本，如果你是新手，请不要使用Centos系统。
 * 在尝试本脚本确实可用之前，请不要将本程序应用于生产环境中。
 * 该程序依赖 Nginx 实现相关功能，请使用 [LNMP](https://lnmp.org) 或其他类似携带 Nginx 脚本安装过 Nginx 的用户特别留意，使用本脚本可能会导致无法预知的错误（未测试，若存在，后续版本可能会处理本问题）。
-* V2Ray 的部分功能依赖于系统时间，请确保您使用V2RAY程序的系统 UTC 时间误差在三分钟之内，时区无关。
+* V2 的部分功能依赖于系统时间，请确保您使用V2RAY程序的系统 UTC 时间误差在三分钟之内，时区无关。
 * 本 bash 依赖于 [V2ray 官方安装脚本](https://install.direct/go.sh) 及 [acme.sh](https://github.com/Neilpang/acme.sh) 工作。
 * Centos 系统用户请预先在防火墙中放行程序相关端口（默认：80，443）
 
 
 ### 启动方式
 
-启动 V2ray：`systemctl start v2ray`
+启动 V2：`systemctl start v2ray`
 
-停止 V2ray：`systemctl stop v2ray`
+停止 V2：`systemctl stop v2ray`
 
 启动 Nginx：`systemctl start nginx`
 
@@ -83,9 +83,9 @@ wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontent.c
 
 Web 目录：`/home/wwwroot/3DCEList`
 
-V2ray 服务端配置：`/etc/v2ray/config.json`
+V2 服务端配置：`/etc/v2ray/config.json`
 
-V2ray 客户端配置: `~/v2ray_info.txt`
+V2 客户端配置: `~/v2ray_info.txt`
 
 Nginx 目录： `/etc/nginx`
 
